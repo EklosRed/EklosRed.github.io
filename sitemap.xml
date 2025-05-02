@@ -96,6 +96,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://yoursite-url/tags/%E6%A0%A2%E9%BE%99%E6%9D%AF/</loc>
+    <lastmod>2025-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -106,7 +113,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/%E6%A0%A2%E9%BE%99%E6%9D%AF%E7%BD%91%E8%B5%9B/</loc>
+    <loc>http://yoursite-url/categories/%E5%9B%BD%E5%86%85%E8%B5%9B%E8%AE%AF/</loc>
     <lastmod>2025-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
