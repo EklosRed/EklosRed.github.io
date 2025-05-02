@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite-url/undefined/%E6%A3%8B%E8%B0%B1%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://yoursite-url/en/2025-Australian-Nationals/</loc>
     
     <lastmod>2025-05-02</lastmod>
     
@@ -47,15 +47,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/en/Hexo-Theme-LiveMyLife/</loc>
-    
-    <lastmod>2020-04-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/archive/index.html</loc>
     
     <lastmod>2017-03-20</lastmod>
@@ -83,13 +74,6 @@
 
   
   <url>
-    <loc>http://yoursite-url/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2025-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/tags/%E6%96%B0%E4%BA%BA%E8%B5%9B/</loc>
     <lastmod>2025-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -103,17 +87,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://yoursite-url/tags/%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A-Australian/</loc>
+    <lastmod>2025-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>http://yoursite-url/categories/Hexo-Theme-LiveMyLife/</loc>
+    <loc>http://yoursite-url/categories/%E5%9B%BD%E5%86%85%E8%B5%9B%E8%AE%AF/</loc>
     <lastmod>2025-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/%E5%9B%BD%E5%86%85%E8%B5%9B%E8%AE%AF/</loc>
+    <loc>http://yoursite-url/categories/%E5%9B%BD%E5%A4%96%E8%B5%9B%E8%AE%AF/</loc>
     <lastmod>2025-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

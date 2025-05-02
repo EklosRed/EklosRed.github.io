@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite-url/undefined/%E6%A3%8B%E8%B0%B1%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://yoursite-url/en/2025-Australian-Nationals/</loc>
     <lastmod>2025-05-02</lastmod>
   </url>
   <url>
     <loc>http://yoursite-url/cn/2025%E2%80%9C%E6%A0%A2%E9%BE%99%E6%9D%AF%E2%80%9D4%E6%9C%88%E9%BB%91%E7%99%BD%E6%A3%8B%E6%96%B0%E4%BA%BA%E7%8E%8B%E4%BA%89%E9%9C%B8%E8%B5%9B%E8%B5%9B%E5%90%8E%E6%88%98%E6%8A%A5/</loc>
     <lastmod>2025-04-12</lastmod>
-  </url>
-  <url>
-    <loc>http://yoursite-url/en/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2020-04-16</lastmod>
   </url>
 </urlset> 
