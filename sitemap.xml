@@ -145,13 +145,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/%E5%9B%BD%E5%86%85%E8%B5%9B%E8%AE%AF/%E5%9B%BD%E9%99%85%E8%B5%9B%E8%AE%AF/</loc>
-    <lastmod>2025-05-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/categories/%E5%9B%BD%E9%99%85%E8%B5%9B%E8%AE%AF/</loc>
     <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
