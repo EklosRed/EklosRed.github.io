@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Hamlite v1.62</title>
+<script type="text/javascript" src="./script/ecl.js"></script>
+<script type="text/javascript" src="./script/hamcode.js"></script>
+</head>
+<body onload="onLoadInit();">
+<div id="dummy"></div>
+<script type="text/javascript">getInitParam();selectCSS();</script>
+<script type="text/javascript">adjustCSS();</script>
+<div id="hamlite">
+  <div id="hambody">
+    <div id="hamboard">
+      <div id="x-coordinate">
+        <img id="think" src="./image/solving.gif" onclick="" />
+        <div class="x_char" id="char_a">a</div>
+        <div class="x_char" id="char_b">b</div>
+        <div class="x_char" id="char_c">c</div>
+        <div class="x_char" id="char_d">d</div>
+        <div class="x_char" id="char_e">e</div>
+        <div class="x_char" id="char_f">f</div>
+        <div class="x_char" id="char_g">g</div>
+        <div class="x_char" id="char_h">h</div>
+      </div>
+      <div id="y-coordinate">
+       <div class="y_char" id="char_1">1</div>
+        <div class="y_char" id="char_2">2</div>
+        <div class="y_char" id="char_3">3</div>
+        <div class="y_char" id="char_4">4</div>
+        <div class="y_char" id="char_5">5</div>
+        <div class="y_char" id="char_6">6</div>
+        <div class="y_char" id="char_7">7</div>
+        <div class="y_char" id="char_8">8</div>
+      </div>
+      <div id="frame_1">
+        <div id="frame_2">
+          <div id="frame_3">
+            <div id="frame_4">
+              <script type="text/javascript">initBoardPrint();</script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="operation">
+      <div id="check">
+        <img id="repeat" src="./image/repeat_off.gif"           onclick="repeat_OnOff()" />
+        <div id="checkPM"><input type="checkbox" id="PutMark"   onclick="onPutMark()" /></div>
+        <div id="checkPE"><input type="checkbox" id="PutEnable" onclick="onPutEnable()" /></div>
+      </div>
+      <div id="control">
+        <div id="score_panel">
+          <div id="BlackFrame"><span id="BlackStone">●</span><span id="BlackCount"></span></div>
+          <div id="WhiteFrame"><span id="WhiteStone">●</span><span id="WhiteCount"></span></div>
+        <div id="NextMove">&gt;<span id="MoveNo">--</span></div><!--
+       --><input type="checkbox" id="PutTrial"        onclick="onPutTrial(this)" /><span id="PutCheck">Put</span><!--
+       --><input type="button" value="---" id="solve" onmouseup="getResult()" ontouchend="getResult()" />
+        </div>
+        <div id="op_button">
+          <input type="button" value="|&lt;" id="first"   onmouseup="moveFirst()" ontouchend="moveFirst()" /><!--
+       --><input type="button" value="&lt;&lt;" id="prev" onmouseup="movePrev()" ontouchend="movePrev()" /><!--
+       --><input type="button" value="diag" id="kifu"     onmouseup="kifuAndReturn()" ontouchend="kifuAndReturn()" /><!--
+       --><input type="button" value="&gt;&gt;" id="next" onmouseup="moveNext()" ontouchend="moveNext()" /><!--
+       --><input type="button" value="&gt;|" id="last"    onmouseup="moveLast()" ontouchend="moveLast()" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="commentFrame">
+    <div id="commentArea"> </div>
+  </div>
+</div>
+<script type="text/javascript">
+  initVirtualBoard();
+  initBoardStatus();
+  replayKif = checkKifPutEnable(replayKif, startColor);
+  initVirtualBoard();
+  initBoardStatus();
+  initStartMove();
+  setNextBpNo();
+  commentInit();
+  printComment(nextMoveNo - 1);
+  initBtnChkOnOff();
+  changeStartMode();
+</script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+/*
+ * for Hamlite v1.60 size "XL"
+ */
+
+@charset "utf-8";
+
+body,h1,h2,h3,p,div,ul,ol,li,dl,dd,dt,table,form,blockquote,pre,address,input,textarea {
+  margin : 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: transparent;
+}
+
+#hamlite {
+  width:  623px;
+  height: 340px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+}
+
+#hambody {
+  float: left;
+  width:  278px;
+  height: 340px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+}
+
+#hamboard {
+  width:  278px;
+  height: 282px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+}
+
+#x-coordinate {
+  height: 24px;
+  position: relative;
+  text-align: center;
+  margin-left:  0px;
+  border-width: 0px;
+  line-height: 24px;
+}
+
+.x_char {
+  position: absolute;
+  border-width: 0px;
+  border-color: transparent;
+  font-family:'ＭＳ ゴシック', 'HiraKakuProN-W3';
+  font-size:22px;
+  text-align: center;
+}
+
+#y-coordinate {
+  float: left;
+  position: relative;
+  width: 14px;
+  margin: 13px 0px 0px 1px;
+  border-width: 0px;
+}
+
+.y_char {
+  position: absolute;
+  width: 14px;
+  height: 15px;
+  margin: 0px 0px 0px 0px;
+  border-width: 0px;
+  font-family:'ＭＳ ゴシック', 'HiraKakuProN-W3';
+  font-size:22px;
+  text-align: center;
+  color: black;
+}
+
+#commentFrame {
+  float: right;
+  width:  343px;
+  height: 338px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+  background-color: transparent;
+}
+
+#commentArea {
+  float: right;
+  margin-top: 24px;
+  width:  323px;
+  height: 314px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+  background-color: transparent;
+  font-family:'ＭＳ ゴシック', 'HiraKakuProN-W3';
+  font-size:20px;
+}
+
+#frame_1 {
+  float: right;
+  border-style: solid;
+  border-width: 3px;
+  border-color: silver rgb(64,64,64) rgb(64,64,64) silver;
+  width: 253px;
+}
+
+#frame_2 {
+  border-style: solid;
+  border-width: 5px;
+  border-color: gray;
+  background-color: #3CB371;
+  height: 242px;
+}
+
+#frame_3 {
+  position: relative;
+  border-style: solid;
+  border-width: 3px;
+  border-color: gray silver silver gray;
+  height: 236px;
+}
+
+#frame_4 {
+  font-family:'ＭＳ ゴシック', 'HiraKakuProN-W3';
+  position: relative;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  height: 233px;
+  font-size:23px;
+}
+
+.ham_disc {
+  border-width: 0px;
+  margin:  0px 0px 0px 0px;
+  padding: 3px 0px 0px 3px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  z-index:1;
+}
+
+.ham_cell {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin:  0px 0px 0px 0px;
+  padding: 1px 0px 0px 1px;
+  font-size:  100%;
+  line-height:26px;
+  position: absolute;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+  z-index:3;
+}
+
+.ham_eval {
+  margin:  0px 0px 0px 0px;
+  padding: 7px 0px 0px 3px;
+  font-size:16px;
+  line-height:16px;
+  position: absolute;
+  text-align: center;
+  color: yellow;
+  width: 27px;
+  height: 27px;
+  z-index:2;
+}
+
+#think {
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+  padding:6px 0px 0px 2px;
+  top:  0px;
+  left: 0px;
+  width:  14px;
+  height: 14px;
+  visibility: hidden;
+}
+
+#char_a {left:  42px;}
+#char_b {left:  71px;}
+#char_c {left: 100px;}
+#char_d {left: 129px;}
+#char_e {left: 158px;}
+#char_f {left: 187px;}
+#char_g {left: 216px;}
+#char_h {left: 245px;}
+
+#char_1 {top:  5px;}
+#char_2 {top:  34px;}
+#char_3 {top:  63px;}
+#char_4 {top:  92px;}
+#char_5 {top: 121px;}
+#char_6 {top: 150px;}
+#char_7 {top: 179px;}
+#char_8 {top: 207px;}
+
+#disc_a1, #cell_a1, #eval_a1 {top:  0px;left:  0px;}
+#disc_b1, #cell_b1, #eval_b1 {top:  0px;left: 29px;}
+#disc_c1, #cell_c1, #eval_c1 {top:  0px;left: 58px;}
+#disc_d1, #cell_d1, #eval_d1 {top:  0px;left: 87px;}
+#disc_e1, #cell_e1, #eval_e1 {top:  0px;left:116px;}
+#disc_f1, #cell_f1, #eval_f1 {top:  0px;left:145px;}
+#disc_g1, #cell_g1, #eval_g1 {top:  0px;left:174px;}
+#disc_h1, #cell_h1, #eval_h1 {top:  0px;left:203px;}
+#disc_a2, #cell_a2, #eval_a2 {top: 29px;left:  0px;}
+#disc_b2, #cell_b2, #eval_b2 {top: 29px;left: 29px;}
+#disc_c2, #cell_c2, #eval_c2 {top: 29px;left: 58px;}
+#disc_d2, #cell_d2, #eval_d2 {top: 29px;left: 87px;}
+#disc_e2, #cell_e2, #eval_e2 {top: 29px;left:116px;}
+#disc_f2, #cell_f2, #eval_f2 {top: 29px;left:145px;}
+#disc_g2, #cell_g2, #eval_g2 {top: 29px;left:174px;}
+#disc_h2, #cell_h2, #eval_h2 {top: 29px;left:203px;}
+#disc_a3, #cell_a3, #eval_a3 {top: 58px;left:  0px;}
+#disc_b3, #cell_b3, #eval_b3 {top: 58px;left: 29px;}
+#disc_c3, #cell_c3, #eval_c3 {top: 58px;left: 58px;}
+#disc_d3, #cell_d3, #eval_d3 {top: 58px;left: 87px;}
+#disc_e3, #cell_e3, #eval_e3 {top: 58px;left:116px;}
+#disc_f3, #cell_f3, #eval_f3 {top: 58px;left:145px;}
+#disc_g3, #cell_g3, #eval_g3 {top: 58px;left:174px;}
+#disc_h3, #cell_h3, #eval_h3 {top: 58px;left:203px;}
+#disc_a4, #cell_a4, #eval_a4 {top: 87px;left:  0px;}
+#disc_b4, #cell_b4, #eval_b4 {top: 87px;left: 29px;}
+#disc_c4, #cell_c4, #eval_c4 {top: 87px;left: 58px;}
+#disc_d4, #cell_d4, #eval_d4 {top: 87px;left: 87px;}
+#disc_e4, #cell_e4, #eval_e4 {top: 87px;left:116px;}
+#disc_f4, #cell_f4, #eval_f4 {top: 87px;left:145px;}
+#disc_g4, #cell_g4, #eval_g4 {top: 87px;left:174px;}
+#disc_h4, #cell_h4, #eval_h4 {top: 87px;left:203px;}
+#disc_a5, #cell_a5, #eval_a5 {top:116px;left:  0px;}
+#disc_b5, #cell_b5, #eval_b5 {top:116px;left: 29px;}
+#disc_c5, #cell_c5, #eval_c5 {top:116px;left: 58px;}
+#disc_d5, #cell_d5, #eval_d5 {top:116px;left: 87px;}
+#disc_e5, #cell_e5, #eval_e5 {top:116px;left:116px;}
+#disc_f5, #cell_f5, #eval_f5 {top:116px;left:145px;}
+#disc_g5, #cell_g5, #eval_g5 {top:116px;left:174px;}
+#disc_h5, #cell_h5, #eval_h5 {top:116px;left:203px;}
+#disc_a6, #cell_a6, #eval_a6 {top:145px;left:  0px;}
+#disc_b6, #cell_b6, #eval_b6 {top:145px;left: 29px;}
+#disc_c6, #cell_c6, #eval_c6 {top:145px;left: 58px;}
+#disc_d6, #cell_d6, #eval_d6 {top:145px;left: 87px;}
+#disc_e6, #cell_e6, #eval_e6 {top:145px;left:116px;}
+#disc_f6, #cell_f6, #eval_f6 {top:145px;left:145px;}
+#disc_g6, #cell_g6, #eval_g6 {top:145px;left:174px;}
+#disc_h6, #cell_h6, #eval_h6 {top:145px;left:203px;}
+#disc_a7, #cell_a7, #eval_a7 {top:174px;left:  0px;}
+#disc_b7, #cell_b7, #eval_b7 {top:174px;left: 29px;}
+#disc_c7, #cell_c7, #eval_c7 {top:174px;left: 58px;}
+#disc_d7, #cell_d7, #eval_d7 {top:174px;left: 87px;}
+#disc_e7, #cell_e7, #eval_e7 {top:174px;left:116px;}
+#disc_f7, #cell_f7, #eval_f7 {top:174px;left:145px;}
+#disc_g7, #cell_g7, #eval_g7 {top:174px;left:174px;}
+#disc_h7, #cell_h7, #eval_h7 {top:174px;left:203px;}
+#disc_a8, #cell_a8, #eval_a8 {top:203px;left:  0px;}
+#disc_b8, #cell_b8, #eval_b8 {top:203px;left: 29px;}
+#disc_c8, #cell_c8, #eval_c8 {top:203px;left: 58px;}
+#disc_d8, #cell_d8, #eval_d8 {top:203px;left: 87px;}
+#disc_e8, #cell_e8, #eval_e8 {top:203px;left:116px;}
+#disc_f8, #cell_f8, #eval_f8 {top:203px;left:145px;}
+#disc_g8, #cell_g8, #eval_g8 {top:203px;left:174px;}
+#disc_h8, #cell_h8, #eval_h8 {top:203px;left:203px;}
+
+.x_corner {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
+#dot_lu {top: 56px;left: 56px;}
+#dot_ru {top: 56px;left:172px;}
+#dot_ld {top:172px;left: 56px;}
+#dot_rd {top:172px;left:172px;}
+#dot_mv {top:172px;left:172px;}
+
+.last_move {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  position: absolute;
+  width:  1px;
+  height: 1px;
+}
+
+#dot_mark {
+  top:  0px;
+  left: 0px;
+  border-color: transparent;
+  background-color:transparent;
+}
+
+#operation {
+}
+
+#check {
+  float: left;
+  margin:  2px 0px 0px 1px;
+  padding: 0px 0px 0px 0px;
+  width: 14px;
+  position: relative;
+}
+
+#repeat {
+  position: absolute;
+  margin: 0px;
+  padding:0px;
+  top:  3px;
+  left: 0px;
+  width:  13px;
+  height: 13px;
+  cursor: pointer;
+}
+
+#checkPM {
+  margin: 0px;
+  padding:0px;
+  position: absolute;
+  top:  22px;
+  left: 0px;
+}
+
+#checkPE {
+  margin: 0px;
+  padding:0px;
+  position:absolute;
+  top: 40px;
+  left: 0px;
+}
+
+#PutMark {
+  margin: 0px;
+  padding:0px;
+  width: 14px;
+  height:14px;
+}
+
+#PutEnable {
+  margin:0px;
+  padding:0px;
+  width: 14px;
+  height:14px;
+}
+
+#control {
+  float: right;
+  margin:  0px;
+  padding: 0px;
+  width: 259px;
+  background-color: #bdb76b;
+}
+
+#score_panel {
+  clear: both;
+  margin:  0px;
+  padding: 0px;
+  position: relative;
+  font-family:'ＭＳ ゴシック', 'HiraKakuProN-W3';
+  font-size:20px;
+  height:26px;
+}
+
+#BlackFrame {
+  position: absolute;
+  top:2px;
+  left: 1px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #bdb76b;
+  width: 44px;
+  height:20px;
+  line-height:22px;
+}
+
+#BlackStone {
+  text-align: left;
+  color: black;
+}
+
+#BlackCount {
+  text-align: left;
+  color: black;
+}
+
+#WhiteFrame {
+  position: absolute;
+  top:2px;
+  left: 52px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #bdb76b;
+  width: 44px;
+  height:20px;
+  line-height:22px;
+}
+
+#WhiteStone {
+  text-align: left;
+  color: white;
+}
+
+#WhiteCount {
+  text-align: left;
+  color: black;
+}
+
+#NextMove {
+  position: absolute;
+  top:  6px;
+  left: 111px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: #bdb76b;
+  text-align: left;
+  color: black;
+  width: 75px;
+  height:16px;
+  line-height:18px;
+}
+
+#MoveNo {
+  margin-left: 2px;
+  padding: 0px;
+  text-align: left;
+  color: black;
+}
+
+#PutTrial {
+  position: absolute;
+  top:  7px;
+  left: 155px;
+  width:  14px;
+  height: 14px;
+}
+
+#PutCheck {
+  position: absolute;
+  top:  6px;
+  left: 172px;
+  line-height:18px;
+}
+
+#solve {
+	margin-top: 1px;
+  position: absolute;
+  top:  0px;
+  left: 211px;
+	width:48px;
+	height:26px;
+	font-size:15px;
+}
+
+#Loop {
+  position: absolute;
+  top:  5px;
+  left: 207px;
+  color: crimson;
+}
+
+#KifuText {
+  position: absolute;
+  top:  2px;
+  left: 1px;
+  width:200px;
+  height:20px;
+  font-family:'ＭＳ ゴシック', 'HiraKakuProN-W3';
+  font-size:19px;
+}
+
+#SetKifu {
+  position: absolute;
+  top:  2px;
+  left: 207px;
+  width: 52px;
+  height:25px;
+  font-family:'Georgia';
+  font-size:15px;
+}
+
+#op_button {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  font-family:'Georgia';
+}
+
+#first { width:48px; height:31px; font-size:18px; }
+#prev  { width:48px; height:31px; font-size:18px; }
+#kifu  { width:67px; height:31px; font-size:18px; }
+#next  { width:48px; height:31px; font-size:18px; }
+#last  { width:48px; height:31px; font-size:18px; }
