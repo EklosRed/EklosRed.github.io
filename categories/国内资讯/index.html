@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/ratinglist/">
+  <link rel="canonical" href="http://yoursite-url/categories/国内资讯/">
   <title>
     
-      Ratinglist - 黑白棋中文资讯站 | /•᷅‎‎•᷄\୭
+      黑白棋中文资讯站 | /•᷅‎‎•᷄\୭
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -383,19 +383,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('img/home-bg.jpg');
-      --intro-header-background-image-url-page: url('/img/home-bg.jpg');
+      --intro-header-background-image-url-post: url('');
+      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/home-bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/home-bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
     }
 
     header.intro-header {
        /*page*/
         background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/home-bg.jpg'); */
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -418,9 +418,9 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
           <div class="site-heading">
-            <h1>Ratinglist</h1>
+            <h1>黑白棋中文资讯站</h1>
             <!--<hr class="small">-->
-            <span class="subheading">数据源自世界黑白棋联盟(数据截至2025-05-07)</span>
+            <span class="subheading">(非官方) 正在搭建中₍≽^ ⦁ ⩊ ⦁ ^≼₎⟆</span>
           </div>
           
         </div>
@@ -476,148 +476,136 @@
                 post-container
             ">
 
-      <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黑白棋棋手排名</title>
-    <style>
-        table {
-            width: 120%; /*  <--- 修改这里，例如设置为90% */
-            margin-left: auto;   /*  <--- 添加这两行来实现居中 */
-            margin-right: auto;  /*  <--- 添加这两行来实现居中 */
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
-        }
-        .hidden-row td:first-child::before { /* 仍然可以在第一列前加图标提示 */
-            content: "⚠️ ";
-            font-size: 0.9em;
-            color: #d9534f;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        #loadingMessage {
-            text-align: center;
-            padding: 20px;
-            font-size: 1.2em;
-            color: #555;
-        }
-        .boolean-true {
-            color: green;
-            font-weight: bold;
-        }
-        .boolean-false {
-            color: #cc0000;
-        }
-    </style>
-</head>
-<body>
-    <h1>黑白棋棋手排名 - CHN (中国)</h1>
-    <div id="loadingMessage">正在加载棋手数据...</div>
-    <table id="ratingsTable">
-        <thead>
-            <tr>
-                <th>排名</th>
-                <th>世界排名</th>
-                <th>等级分</th>
-                <th>误差/局数</th>
-                <th>在线等级分</th>
-                <th>棋手名称</th>
-                <th>国家/地区</th>
-                <th>WOF资料链接</th>
-                <th>国家代码</th>
-                <th>正式注册</th>
-            </tr>
-        </thead>
-        <tbody id="ratingsTableBody">
-            <!-- 棋手数据将由 JavaScript 插入此处 -->
-        </tbody>
-    </table>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tableBody = document.getElementById('ratingsTableBody');
-            const loadingMessage = document.getElementById('loadingMessage');
-            fetch('ratings_chn.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP 错误! 状态码: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    loadingMessage.style.display = 'none';
-                    if (!data || data.length === 0) {
-                        const row = tableBody.insertRow();
-                        const cell = row.insertCell();
-                        cell.colSpan = 10; // 表格的总列数现在是 10
-                        cell.textContent = '未找到中国 (CHN) 棋手数据。';
-                        cell.style.textAlign = 'center';
-                        return;
-                    }
-                    data.forEach(player => {
-                        const row = tableBody.insertRow();
-                        // 如果棋手是隐藏状态，仍然为该行添加特殊样式 (例如背景色)
-                        if (player['Is Hidden']) {
-                            row.classList.add('hidden-row');
-                        }
-                        row.insertCell().textContent = player.Rank || 'N/A';
-                        row.insertCell().textContent = player['World Rank'] || 'N/A';
-                        row.insertCell().textContent = player.Rating || 'N/A';
-                        row.insertCell().textContent = player['Error/Games'] || 'N/A';
-                        row.insertCell().textContent = player['Online Rating'] || 'N/A';
-                        row.insertCell().textContent = player['Player Name'] || 'N/A';
-                        row.insertCell().textContent = player.Country || 'N/A';
-                        const profileCell = row.insertCell();
-                        if (player['Profile URL']) {
-                            const link = document.createElement('a');
-                            link.href = player['Profile URL'];
-                            link.textContent = '查看资料';
-                            link.target = '_blank';
-                            profileCell.appendChild(link);
-                        } else {
-                            profileCell.textContent = '无';
-                        }
-                        row.insertCell().textContent = player['Country Code'] || 'N/A';
-                        const officialCell = row.insertCell();
-                        officialCell.textContent = player['Is Official'] ? '是' : '否';
-                        officialCell.classList.add(player['Is Official'] ? 'boolean-true' : 'boolean-false');
-                        // const hiddenCell = row.insertCell();
-                        // hiddenCell.textContent = player['Is Hidden'] ? '是' : '否';
-                        // hiddenCell.classList.add(player['Is Hidden'] ? 'boolean-true' : 'boolean-false');
-                    });
-                })
-                .catch(error => {
-                    loadingMessage.textContent = `加载棋手数据失败: ${error.message}`;
-                    console.error('获取或解析 JSON 时出错:', error);
-                });
-        });
-    </script>
-</body>
-</html>
+      <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
+
+      
+
+      <!-- 归档列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2025">
+          <span class="tag-text">2025</span>
+        </span>
+        <ul>
+          
+          <li>
+            05-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/The-Day-I-Escaped-The-Openings-Prison/" style="color: #0085a1">
+              <span>
+                The-Day-I-Escaped-The-Openings-Prison
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/Interview-with-Jonathan-Cerf/" style="color: #0085a1">
+              <span>
+                Jonathan Cerf的采访(Interview with Jonathan Cerf)
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/Rørby-Open-2025/" style="color: #0085a1">
+              <span>
+                2025Rørby黑白棋公开赛 (Rørby Open 2025)
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/2025-National-Iranian-Championship/" style="color: #0085a1">
+              <span>
+                2025年伊朗国家黑白棋锦标赛 (2025 National Iranian Championship)
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2025第三届亚太黑白棋锦标赛即将开启！/" style="color: #0085a1">
+              <span>
+                2025第三届亚太黑白棋锦标赛即将开启！
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-02
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/2025-Australian-Nationals/" style="color: #0085a1">
+              <span>
+                2025澳大利亚全国锦标赛（2025 Australian Nationals）
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-24
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/杭州市休闲智力运动公开赛（国际跳棋、五子棋、扑克、魔方、黑白棋、军棋）暨2025“栢龙杯”青少年黑白棋锦标赛圆满落幕/" style="color: #0085a1">
+              <span>
+                杭州市休闲智力运动公开赛（国际跳棋、五子棋、扑克、魔方、黑白棋、军棋）暨2025“栢龙杯”青少年黑白棋锦标赛圆满落幕
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-13
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2025“栢龙杯”4月黑白棋新人王争霸赛赛后战报/" style="color: #0085a1">
+              <span>
+                2025“栢龙杯”4月黑白棋新人王争霸赛赛后战报
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/高梨悠介九段　名人戦２連覇達成！/" style="color: #0085a1">
+              <span>
+                高梨悠介九段　名人戦２連覇達成！
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 
       <!-- 如果开启评论功能 -->
-      
-      <hr>
-
-      
-
-      
       
     </div>
 
@@ -636,23 +624,23 @@
 <div class="widget">
   <ul>
     
-    <a href="../en/The-Day-I-Escaped-The-Openings-Prison/">
+    <a href="../../en/The-Day-I-Escaped-The-Openings-Prison/">
       <li>The-Day-I-Escaped-The-Openings-Prison</li>
     </a>
     
-    <a href="../en/Interview-with-Jonathan-Cerf/">
+    <a href="../../en/Interview-with-Jonathan-Cerf/">
       <li>Jonathan Cerf的采访(Interview with Jonathan Cerf)</li>
     </a>
     
-    <a href="../en/R%C3%B8rby-Open-2025/">
+    <a href="../../en/R%C3%B8rby-Open-2025/">
       <li>2025Rørby黑白棋公开赛 (Rørby Open 2025)</li>
     </a>
     
-    <a href="../en/2025-National-Iranian-Championship/">
+    <a href="../../en/2025-National-Iranian-Championship/">
       <li>2025年伊朗国家黑白棋锦标赛 (2025 National Iranian Championship)</li>
     </a>
     
-    <a href="../cn/2025%E7%AC%AC%E4%B8%89%E5%B1%8A%E4%BA%9A%E5%A4%AA%E9%BB%91%E7%99%BD%E6%A3%8B%E9%94%A6%E6%A0%87%E8%B5%9B%E5%8D%B3%E5%B0%86%E5%BC%80%E5%90%AF%EF%BC%81/">
+    <a href="../../cn/2025%E7%AC%AC%E4%B8%89%E5%B1%8A%E4%BA%9A%E5%A4%AA%E9%BB%91%E7%99%BD%E6%A3%8B%E9%94%A6%E6%A0%87%E8%B5%9B%E5%8D%B3%E5%B0%86%E5%BC%80%E5%90%AF%EF%BC%81/">
       <li>2025第三届亚太黑白棋锦标赛即将开启！</li>
     </a>
     
