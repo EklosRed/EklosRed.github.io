@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite-url/en/A-record-breaking-tournament-of-Thailand!!/</loc>
+    
+    <lastmod>2025-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/ratinglist/ratings_chn.json</loc>
     
     <lastmod>2025-05-28</lastmod>
@@ -255,6 +264,13 @@
   
   <url>
     <loc>http://yoursite-url/tags/%E6%97%A5%E6%9C%AC-Japan/</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/%E6%B3%B0%E5%9B%BD-Thailand/</loc>
     <lastmod>2025-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
