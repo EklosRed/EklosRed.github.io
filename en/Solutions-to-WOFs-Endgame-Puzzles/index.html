@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tags/澳大利亚-Australian/">
+  <link rel="canonical" href="http://yoursite-url/en/Solutions-to-WOFs-Endgame-Puzzles/">
   <title>
     
-      黑白棋中文资讯站 | /•᷅‎‎•᷄\୭
+      Solutions to WOF&#39;s Endgame Puzzles - 黑白棋中文资讯站 | /•᷅‎‎•᷄\୭
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -393,9 +393,9 @@
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url(''); */
       
     }
 
@@ -417,10 +417,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>黑白棋中文资讯站</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">(非官方) 正在搭建中₍≽^ ⦁ ⩊ ⦁ ^≼₎⟆</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#其他" title="其他">其他</a>
+              
+            </div>
+            <h1>Solutions to WOF&#39;s Endgame Puzzles</h1>
+            <h2 class="subheading">转译自世界黑白棋联盟官网</h2>
+            <span class="meta">
+              Posted by 深红 on
+              2025-06-25
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">14</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.1k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -461,436 +493,358 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <p><em><a target="_blank" rel="noopener" href="https://www.worldothello.org/news/429/solutions-to-wofs-endgame-puzzles">https://www.worldothello.org/news/429/solutions-to-wofs-endgame-puzzles</a></em><br>
+<em>Written by Jonathan Cerf</em></p>
+<p><img src="https://www.worldothello.org/uploads/d0528c94d280af625bf3b5463f825566/Alternative%20Artwork.png" alt=""></p>
+<blockquote>
+<p>I’ve been enjoying the endgame puzzles that are published daily on the <a target="_blank" rel="noopener" href="http://worldothello.org">worldothello.org</a> website.  Some of these are relatively easy, but I have found many others to be quite challenging.  No solutions to any of these puzzles are ever published, and I think that’s a shame.  You can learn a lot about endgame play from these puzzles.  But it’s difficult to learn anything from a particular puzzle if you can’t find a solution.  I’ve written a program in the computer language Python to address this problem.  It prints out a solution for any WOF endgame puzzle.  All of the resources that anyone would need to run my program are available for free on the internet, and later in this article, I will share my program’s source code.  This means that anyone who is occasionally frustrated by a WOF puzzle will from now on have access to the puzzle’s solution.  But before I explain how to set up your computer to run my program, I will explain how to “read” its output.</p>
+</blockquote>
+<p>我一直很享受在世界黑白棋联盟 (<a target="_blank" rel="noopener" href="http://worldothello.org">worldothello.org</a>) 网站上每日发布的残局谜题。其中一些相对简单，但我发现很多谜题相当具有挑战性。这些谜题从不发布任何解法，我认为这很遗憾。从这些谜题中可以学到很多关于残局打法的知识。但是，如果找不到解法，就很难从特定的谜题中学到东西。<br>
+为了解决这个问题，我用 Python 编程语言编写了一个程序。它可以打印出任何 WOF (World Othello Federation) 残局谜题的解法。运行我的程序所需的所有资源都可以在互联网上免费获得，稍后我将在本文中分享我的程序源代码。这意味着，任何偶尔被 WOF 谜题难住的人，从现在起都能获得该谜题的解法。不过，在我解释如何设置计算机来运行我的程序之前，我将先解释如何“阅读”它的输出。</p>
+<blockquote>
+<p>Here is a puzzle that appeared recently on the WOF website:</p>
+</blockquote>
+<p>以下是一个最近出现在 WOF 网站上的谜题：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/abd804f4-00ad-4e75-9fb3-73f3921a676a" alt=""></p>
+<blockquote>
+<p>And here is my program’s “solution” to the above puzzle:</p>
+</blockquote>
+<p>以下是我的程序针对上述谜题的“解法”：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/688a6e90-be36-42d2-8ef2-8826fe031ce9" alt=""></p>
+<blockquote>
+<p>If you attempt to solve one of the daily endgame puzzles interactively on the internet, your computer opponent will select a single response to each of your moves.   But along the way, your computer-generated opponent may well have had options that it rejected in favor of the moves it chose to make.  My program does not know which option your computer-generated opponent will select.  Therefore, all of the computer’s possible choices are included in my program’s “solution.”  If you had used my program’s output for the puzzle shown above while playing against the on-screen computer opponent, you should have begun by playing to a8, because every winning line of play in my program’s output begins with a move to a8.  Your computer opponent would then have responded by playing to h2 as shown below:</p>
+</blockquote>
+<p>如果您尝试在互联网上交互式地解决每日残局谜题，您的计算机对手会针对您的每一步落子选择单一回应。但是，在这个过程中，您的计算机对手很可能有其他可选落点，它只是选择了当前落点而放弃了那些选项。我的程序并不知道您的计算机对手会选择哪个选项。因此，在我的程序的“解法”输出中包含了计算机所有可能的选择。如果您在对抗屏幕上的计算机对手时使用了我的程序针对上面谜题的输出，您应该从落子 a8 开始，因为我程序输出中的每一个获胜行都始于落子 a8。您的计算机对手随后会回应落子 h2，如下图所示：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/58f86e8a-eea2-409e-98e5-6440ce48a4fe" alt="SWEP_Puzzle2.png"></p>
+<blockquote>
+<p>Only four lines of my program’s solution reflect this particular choice by your computer opponent.  Those four lines are highlighted in blue below.  In each of those four lines, my program indicates that a winning response to the computer’s h2 move would be a move to f1:</p>
+</blockquote>
+<p>在我的程序解法中，只有四行文本反映了计算机对手的这一特定选择（落子 h2）。这四行文本在下图中以蓝色高亮显示。在这四行中的每一行，我的程序都表明，对计算机的 h2 落子的获胜回应将是落子 f1：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/8d1e7731-5eef-4546-9078-4e484e8ba16e" alt="SWEP_Solution2.png"></p>
+<blockquote>
+<p>If you had followed my program’s recommendation and moved to f1, the computer would have chosen to respond by moving to g8.  Only two lines of text in my program’s output reflect this choice, and those lines are shown highlighted in blue below:</p>
+</blockquote>
+<p>如果您遵循了我的程序的建议并落子 f1，计算机会选择回应落子 g8。在我的程序输出中，只有两行文本反映了这一选择，这些行在下面以蓝色高亮显示：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/51e5db95-a1a3-4258-8a33-0401a85b4264" alt="SWEP_Solution3.png"></p>
+<blockquote>
+<p>In each of the two highlighted lines of text shown above, my program shows that a winning response to the computer’s g8 move would be a move by White to a7.   If you were playing out this endgame puzzle as White on the internet, your computer opponent would have responded to your a7 move by playing at a1, producing the position shown below:</p>
+</blockquote>
+<p>在上面显示的每个高亮行中，我的程序表明，对计算机的 g8 落子的获胜回应将是白方落子 a7。如果您在互联网上作为白方进行这个残局谜题的对弈，您的计算机对手会回应您的 a7 落子，落子 a1，产生如下图所示的局面：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/51a2545f-a480-4aba-bb93-f73e89099f2e" alt="SWEP_Puzzle3.png"></p>
+<blockquote>
+<p>Only one line of text in my program’s output reflects the full line of play jointly selected by you and your computer opponent up to this point.  That single line of text is shown highlighted in blue below:</p>
+</blockquote>
+<p>在我的程序输出中，只有一行文本反映了您和您的计算机对手至此共同选择的完整行棋过程。这一行文本在下面以蓝色高亮显示：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/1d307428-7fdf-4509-8520-a5e179a4b615" alt="SWEP_Solution4.png"></p>
+<blockquote>
+<p>As indicated in the highlighted line of text above, a winning response to the computer’s most recent move to a1 would have been a White move to g7.  The computer would then have had only one possible move (to h8).  White could then have played to the only remaining vacant square (at a2), producing the position shown below:</p>
+</blockquote>
+<p>如上图高亮文本所示，对计算机最近一次落子 a1 的获胜回应将是白方落子 g7。随后计算机将只剩下一个可能的落子（h8）。白方然后可以落子到最后一个空位上（a2），产生如下图所示的局面：</p>
+<p><img src="https://www.worldothello.org/download_file/view_inline/da37e9df-be12-4f43-89dd-28c3b9142959" alt="SWEP_Puzzle4.png"></p>
+<blockquote>
+<p>Although only one line of text from my program’s output reflects the correct way to achieve a win against your online computer opponent, that one line of text alone would not suffice as a “solution” to the original puzzle.  A full solution should take into account every possible line of defense.  It should not merely suggest a single series of winning plays against the particular defensive moves chosen by a given opponent.  Incidentally, my program does not attempt to maximize its margin of victory.  In situations where there may be more than one winning move, it settles for the first move it discovers that leads to a sure victory, completely ignoring the possibility that a different move might produce a more impressive win.</p>
+</blockquote>
+<p>尽管在我的程序输出中只有一行文本反映了对抗您的在线计算机对手获胜的正确方式，但仅凭这一行文本本身并不能作为原始谜题的完整“解法”。一个完整的解法应该考虑到所有可能的防守路线。它不应该仅仅针对特定对手选择的防守落子给出单一获胜序列。顺便提一下，我的程序并不试图最大化其获胜优势。在可能存在多个获胜落子的情况下，它会选择它发现的第一个能通向必然胜利的落子，完全忽略了另一个落子可能带来更显著胜利的可能性。</p>
+<blockquote>
+<p>Here is how to install and run my program.  It will run on either an Apple or on a Windows-based machine.  The installation process is a bit cumbersome, but it only needs to be done once.  After that, you can run my program as often as you like without repeating the installation procedure.   To install my program, you will first of all need a relatively up-to-date version of the Python computer language that is suitable for your computer’s operating system.  Python is available free of charge from <a target="_blank" rel="noopener" href="http://Python.org">Python.org</a>.  After installing Python, you will need to install Python’s “requests” module.  Installing this module is probably the trickiest step in the whole operation.  To install “requests” you will need to go to your “Terminal” window and type in one of two possible commands (depending upon which version of Python you have installed).  The wrong command will do no harm, but neither will it do any good.   If you have trouble either opening a “Terminal” window or running one of the “pip” commands shown below, Google can provide help. Here are the two possible commands:</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;pip <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
+<p>or:</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;pip3 <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
+<p>You should next download the file containing my code, which can be found here.  The file is called “PuzzleSolver.txt.”  After you download it, move it to an easy-to-find folder on your computer (such as your Documents folder).  Then change its name from “PuzzleSolver.txt” to “<a target="_blank" rel="noopener" href="http://PuzzleSolver.py">PuzzleSolver.py</a>” (I have given it the temporary name “PuzzleSolver.txt” only because many computers for security reasons are not comfortable letting you download a file having a “.py” extension).</p>
+</blockquote>
+<p>要安装我的程序，您首先需要一个相对较新版本的 Python 编程语言，该版本需适合您计算机的操作系统。Python 可以免费从 <a target="_blank" rel="noopener" href="http://Python.org">Python.org</a> 获取。安装 Python 后，您需要安装 Python 的 “requests” 模块。安装这个模块可能是整个操作中最棘手的步骤。要安装 “requests”，您需要打开“终端”窗口并输入以下两个命令之一（具体取决于您安装的 Python 版本）。输入错误的命令不会造成危害，但也不会起任何作用。如果您在打开“终端”窗口或运行下面所示的 “pip” 命令时遇到困难，可以通过 Google 寻求帮助。以下是两个可能的命令：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
+<p>或者：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
+<p>接下来，您应该下载包含我代码的文件，可以在这里找到。该文件名为 “PuzzleSolver.txt”。下载后，将其移动到计算机上易于查找的文件夹中（例如您的文档文件夹）。然后将其名称从 “PuzzleSolver.txt” 更改为 “<a target="_blank" rel="noopener" href="http://PuzzleSolver.py">PuzzleSolver.py</a>”（我给它临时命名为 “PuzzleSolver.txt”，只是因为许多计算机出于安全原因，不太允许您下载扩展名为 “.py” 的文件）。</p>
+<blockquote>
+<p>You should probably install a Python IDE.  I recommend Visual Studio Code, which is available on the internet free of charge (from <a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>).  It is possible to run Python programs directly from your Terminal window without using an IDE, but you are likely to have an easier time if you use an IDE.  After you have installed an IDE, fire it up and direct it to open the file containing my code: Puzzle <a target="_blank" rel="noopener" href="http://Solver.py">Solver.py</a>.  In part because of the file’s “.py” extension, your IDE should immediately recognize the plain text inside this file as Python code.  You should then be able to click on the IDE’s “run” icon (in the case of Visual Studio Code, the “run” icon is a right-facing arrow near the upper right corner of the screen).  Probably, you will need to scroll or enlarge the output portion of your screen to see the full text of my program’s puzzle solution.  It is possible that you could encounter a problem if you have more than one version of Python installed on your computer.  In that case you will need to make sure that your IDE is using the version of Python in which you have installed the “requests” module.</p>
+</blockquote>
+<p>您可能需要安装一个 Python IDE（集成开发环境）。我推荐 Visual Studio Code，可以在互联网上免费获得（网址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a> ）。不使用 IDE 也可以直接从您的终端窗口运行 Python 程序，但使用 IDE 可能会让您更轻松。安装好 IDE 后，启动它并指示它打开包含我代码的文件：<a target="_blank" rel="noopener" href="http://PuzzleSolver.py">PuzzleSolver.py</a>。部分原因是文件的 “.py” 扩展名，您的 IDE 应该会立即识别此文件中的纯文本为 Python 代码。然后您应该能够点击 IDE 的“运行”图标（在 Visual Studio Code 中，“运行”图标是屏幕右上角附近的一个向右的箭头）。您可能需要滚动或放大屏幕的输出部分才能看到程序谜题解法的完整文本。如果您的计算机上安装了多个版本的 Python，您可能会遇到问题。在这种情况下，您需要确保您的 IDE 使用的是您已安装 “requests” 模块的那个 Python 版本。</p>
+<blockquote>
+<p>Whenever you run my program, it will analyze the puzzle that is at that time being displayed on the WOF website.  If you run my program today, it will proceed to analyze today’s puzzle.  If you run my code tomorrow, it will analyze tomorrow’s puzzle.   I have not included any explanatory comments in my code, but I will gladly respond to any questions about how it works or any questions about how to install and run it.  You can get in touch with me through the “Contact” menu option on the home screen of my arithmetic website, <a target="_blank" rel="noopener" href="http://AdventuresInArithmetic.com">AdventuresInArithmetic.com</a>.</p>
+</blockquote>
+<p>每当您运行我的程序时，它都会分析当时显示在 WOF 网站上的谜题。如果您今天运行我的程序，它将分析今天的谜题。如果您明天运行我的代码，它将分析明天的谜题。</p>
+<p>我的代码中没有包含任何解释性注释，但我很乐意回答有关其工作原理或如何安装和运行它的任何问题。您可以通过我的算术网站 <a target="_blank" rel="noopener" href="http://AdventuresInArithmetic.com">AdventuresInArithmetic.com</a> 主页上的“联系”菜单选项与我取得联系。</p>
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
 
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2025">
-          <span class="tag-text">2025</span>
-        </span>
-        <ul>
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <li>
-            06-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Solutions-to-WOFs-Endgame-Puzzles/" style="color: #0085a1">
-              <span>
-                Solutions to WOF's Endgame Puzzles
-                
-              </span>
-            </a>
-          </li>
           
-          <li>
-            06-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025“栢龙杯”6月黑白棋新人王争霸赛赛后战报/" style="color: #0085a1">
-              <span>
-                2025“栢龙杯”6月黑白棋新人王争霸赛赛后战报
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-08
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Conexión-Othello-Latinoamérica/" style="color: #0085a1">
-              <span>
-                拉丁美洲黑白棋连结赛（Conexión Othello Latinoamérica）
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/A-record-breaking-tournament-of-Thailand!!/" style="color: #0085a1">
-              <span>
-                泰国锦标赛参赛人数创历史新高!!(A record-breaking tournament of Thailand!!)
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/[报名通知]2025“栢龙杯”黑白棋锦标赛CNOC2025/" style="color: #0085a1">
-              <span>
-                2025"栢龙杯"黑白棋锦标赛(CNOC2025)开始报名
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025“栢龙杯”5月黑白棋新人王争霸赛赛后战报/" style="color: #0085a1">
-              <span>
-                2025“栢龙杯”5月黑白棋新人王争霸赛赛后战报
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-08
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/The-Day-I-Escaped-The-Openings-Prison/" style="color: #0085a1">
-              <span>
-                我逃离开局监狱的那一天(The Day I Escaped The Openings Prison)
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Interview-with-Jonathan-Cerf/" style="color: #0085a1">
-              <span>
-                Jonathan Cerf的采访(Interview with Jonathan Cerf)
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/Rørby-Open-2025/" style="color: #0085a1">
-              <span>
-                2025Rørby黑白棋公开赛 (Rørby Open 2025)
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/2025-National-Iranian-Championship/" style="color: #0085a1">
-              <span>
-                2025年伊朗国家黑白棋锦标赛 (2025 National Iranian Championship)
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-03
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025第三届亚太黑白棋锦标赛即将开启！/" style="color: #0085a1">
-              <span>
-                2025第三届亚太黑白棋锦标赛即将开启！
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-02
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/2025-Australian-Nationals/" style="color: #0085a1">
-              <span>
-                2025澳大利亚全国锦标赛（2025 Australian Nationals）
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/杭州市休闲智力运动公开赛（国际跳棋、五子棋、扑克、魔方、黑白棋、军棋）暨2025“栢龙杯”青少年黑白棋锦标赛圆满落幕/" style="color: #0085a1">
-              <span>
-                杭州市休闲智力运动公开赛（国际跳棋、五子棋、扑克、魔方、黑白棋、军棋）暨2025“栢龙杯”青少年黑白棋锦标赛圆满落幕
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-13
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2025“栢龙杯”4月黑白棋新人王争霸赛赛后战报/" style="color: #0085a1">
-              <span>
-                2025“栢龙杯”4月黑白棋新人王争霸赛赛后战报
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/高梨悠介九段　名人戦２連覇達成！/" style="color: #0085a1">
-              <span>
-                高梨悠介九段　名人戦２連覇達成！
-                
-              </span>
-            </a>
+          <li class="next">
+            <a href="/cn/2025“栢龙杯”6月黑白棋新人王争霸赛赛后战报/" data-toggle="tooltip" data-placement="top" title="2025“栢龙杯”6月黑白棋新人王争霸赛赛后战报">Next Post &rarr;</a>
           </li>
           
         </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此网站或发现它对您有用，则欢迎对此发表评论。 也欢迎您分享此网站，以便帮助更多棋友。 如果文章中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Solutions to WOF&#39;s Endgame Puzzles&body=Hi,I found this website and thought you might like it http://yoursite-url/en/Solutions-to-WOFs-Endgame-Puzzles/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Wed Jun 25 2025 16:39:06 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
       </div>
-      
-    </div>
-  </div>
-</div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
 
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
 
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- RECENT POSTS -->
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-<h5><a href="/">最近文章</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../en/Solutions-to-WOFs-Endgame-Puzzles/">
-      <li>Solutions to WOF&#39;s Endgame Puzzles</li>
-    </a>
-    
-    <a href="../../cn/2025%E2%80%9C%E6%A0%A2%E9%BE%99%E6%9D%AF%E2%80%9D6%E6%9C%88%E9%BB%91%E7%99%BD%E6%A3%8B%E6%96%B0%E4%BA%BA%E7%8E%8B%E4%BA%89%E9%9C%B8%E8%B5%9B%E8%B5%9B%E5%90%8E%E6%88%98%E6%8A%A5/">
-      <li>2025“栢龙杯”6月黑白棋新人王争霸赛赛后战报</li>
-    </a>
-    
-    <a href="../../en/Conexi%C3%B3n-Othello-Latinoam%C3%A9rica/">
-      <li>拉丁美洲黑白棋连结赛（Conexión Othello Latinoamérica）</li>
-    </a>
-    
-    <a href="../../en/A-record-breaking-tournament-of-Thailand!!/">
-      <li>泰国锦标赛参赛人数创历史新高!!(A record-breaking tournament of Thailand!!)</li>
-    </a>
-    
-    <a href="../../cn/%5B%E6%8A%A5%E5%90%8D%E9%80%9A%E7%9F%A5%5D2025%E2%80%9C%E6%A0%A2%E9%BE%99%E6%9D%AF%E2%80%9D%E9%BB%91%E7%99%BD%E6%A3%8B%E9%94%A6%E6%A0%87%E8%B5%9BCNOC2025/">
-      <li>2025&#34;栢龙杯&#34;黑白棋锦标赛(CNOC2025)开始报名</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#其他" title="其他">其他</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#栢龙杯" title="栢龙杯" rel="4">栢龙杯</a>
-    
-    
-    
-    <a href="/tags/#新人赛赛事" title="新人赛赛事" rel="3">新人赛赛事</a>
-    
-    
-    
-    <a href="/tags/#通知公告" title="通知公告" rel="2">通知公告</a>
-    
-    
-    
-    <a href="/tags/#青少年赛事" title="青少年赛事" rel="1">青少年赛事</a>
-    
-    
-    
-    <a href="/tags/#澳大利亚/Australian" title="澳大利亚/Australian" rel="1">澳大利亚/Australian</a>
-    
-    
-    
-    <a href="/tags/#伊朗/Iranian" title="伊朗/Iranian" rel="1">伊朗/Iranian</a>
-    
-    
-    
-    <a href="/tags/#棋手采访" title="棋手采访" rel="1">棋手采访</a>
-    
-    
-    
-    <a href="/tags/#心得分享" title="心得分享" rel="1">心得分享</a>
-    
-    
-    
-    <a href="/tags/#丹麦/Denmark" title="丹麦/Denmark" rel="1">丹麦/Denmark</a>
-    
-    
-    
-    <a href="/tags/#日本/Japan" title="日本/Japan" rel="1">日本/Japan</a>
-    
-    
-    
-    <a href="/tags/#泰国/Thailand" title="泰国/Thailand" rel="1">泰国/Thailand</a>
-    
-    
-    
-    <a href="/tags/#其他" title="其他" rel="2">其他</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#国内资讯">
-      <li>国内资讯</li>
-    </a>
-    
-    <a href="/categories/#国际资讯">
-      <li>国际资讯</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/">友情链接</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="http://hbqhome.com/forum.php" target="_blank">黑白棋乐园</a></li>
-  
-  <li><a href="https://www.othello.cn/endgame/endgame.php" target="_blank">每日一题</a></li>
-  
-  <li><a href="https://www.worldothello.org/" target="_blank">世界黑白棋联盟</a></li>
-  
-  <li><a href="https://www.othello.gr.jp/" target="_blank">日本黑白棋联盟</a></li>
-  
-  <li><a href="https://www.vint.ee/zh-cn/games/#logi-sisse" target="_blank">vint.ee</a></li>
-  
-  <li><a href="https://flipthedisc.com/" target="_blank">Flip The Disc</a></li>
-  
-  <li><a href="https://www.eothello.com/" target="_blank">eothello</a></li>
-  
-  <li><a href="https://www.playok.com/zh/reversi/" target="_blank">PlayOK</a></li>
-  
-  <li><a href="https://www.liveothello.com/livegames.php" target="_blank">LiveOthello</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于本站</a></h5>
-  <div class="short-about">
+        <h5>友情链接</h5>
+        <ul class="list-inline">
 
-    
-    <img id="avatar_pic" src="/img/avatar/othello.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>学习喵分钟，精通咪世功。</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
+          
+          <li>
+            <a href="http://hbqhome.com/forum.php" target="_blank">黑白棋乐园</a>
+          </li>
+          
+          <li>
+            <a href="https://www.othello.cn/endgame/endgame.php" target="_blank">每日一题</a>
+          </li>
+          
+          <li>
+            <a href="https://www.worldothello.org/" target="_blank">世界黑白棋联盟</a>
+          </li>
+          
+          <li>
+            <a href="https://www.othello.gr.jp/" target="_blank">日本黑白棋联盟</a>
+          </li>
+          
+          <li>
+            <a href="https://www.vint.ee/zh-cn/games/#logi-sisse" target="_blank">vint.ee</a>
+          </li>
+          
+          <li>
+            <a href="https://flipthedisc.com/" target="_blank">Flip The Disc</a>
+          </li>
+          
+          <li>
+            <a href="https://www.eothello.com/" target="_blank">eothello</a>
+          </li>
+          
+          <li>
+            <a href="https://www.playok.com/zh/reversi/" target="_blank">PlayOK</a>
+          </li>
+          
+          <li>
+            <a href="https://www.liveothello.com/livegames.php" target="_blank">LiveOthello</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</section>
-
-        <hr>
-    
-        <!-- Visitors -->
-<h5><a href="/">访客数据</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
+</article>
 
 
-        <hr>
-    
-</div>
 
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
 
-    
-  </div>
-</div>
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
