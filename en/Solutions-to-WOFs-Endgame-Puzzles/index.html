@@ -247,17 +247,6 @@
           
           
           <li>
-            <a href="/Calendar/">
-              
-                实盘赛程
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
                   关于本站
@@ -269,10 +258,10 @@
           
           
           <li>
-            <a href="/particulars/">
+            <a href="/Calendar/">
               
-                      资料下载
-                      
+                实盘赛程
+              
               
             </a>
           </li>
@@ -302,10 +291,8 @@
           
           
           <li>
-            <a href="/ratinglist/">
+            <a href="/club/">
               
-                        实盘排名
-                        
               
             </a>
           </li>
@@ -313,8 +300,10 @@
           
           
           <li>
-            <a href="/club/">
+            <a href="/particulars/">
               
+                      资料下载
+                      
               
             </a>
           </li>
@@ -326,6 +315,17 @@
               
               标签
               
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/ratinglist/">
+              
+                        实盘排名
+                        
               
             </a>
           </li>
@@ -514,10 +514,9 @@
 <p><em>Written by Jonathan Cerf</em></p>
 <p><img src="https://www.worldothello.org/uploads/d0528c94d280af625bf3b5463f825566/Alternative%20Artwork.png" alt=""></p>
 <blockquote>
-<p>I’ve been enjoying the endgame puzzles that are published daily on the <a target="_blank" rel="noopener" href="http://worldothello.org">worldothello.org</a> website.  Some of these are relatively easy, but I have found many others to be quite challenging.  No solutions to any of these puzzles are ever published, and I think that’s a shame.  You can learn a lot about endgame play from these puzzles.  But it’s difficult to learn anything from a particular puzzle if you can’t find a solution.  I’ve written a program in the computer language Python to address this problem.  It prints out a solution for any WOF endgame puzzle.  All of the resources that anyone would need to run my program are available for free on the internet, and later in this article, I will share my program’s source code.  This means that anyone who is occasionally frustrated by a WOF puzzle will from now on have access to the puzzle’s solution.  But before I explain how to set up your computer to run my program, I will explain how to “read” its output.</p>
+<p>I’ve been enjoying the endgame puzzles that are published daily on the worldothello.org website.  Some of these are relatively easy, but I have found many others to be quite challenging.  No solutions to any of these puzzles are ever published, and I think that’s a shame.  You can learn a lot about endgame play from these puzzles.  But it’s difficult to learn anything from a particular puzzle if you can’t find a solution.  I’ve written a program in the computer language Python to address this problem.  It prints out a solution for any WOF endgame puzzle.  All of the resources that anyone would need to run my program are available for free on the internet, and later in this article, I will share my program’s source code.  This means that anyone who is occasionally frustrated by a WOF puzzle will from now on have access to the puzzle’s solution.  But before I explain how to set up your computer to run my program, I will explain how to “read” its output.</p>
 </blockquote>
-<p>我一直很享受在世界黑白棋联盟 (<a target="_blank" rel="noopener" href="http://worldothello.org">worldothello.org</a>) 网站上每日发布的残局谜题。其中一些相对简单，但我发现很多谜题相当具有挑战性。这些谜题从不发布任何解法，我认为这很遗憾。从这些谜题中可以学到很多关于残局打法的知识。但是，如果找不到解法，就很难从特定的谜题中学到东西。<br>
-为了解决这个问题，我用 Python 编程语言编写了一个程序。它可以打印出任何 WOF (World Othello Federation) 残局谜题的解法。运行我的程序所需的所有资源都可以在互联网上免费获得，稍后我将在本文中分享我的程序源代码。这意味着，任何偶尔被 WOF 谜题难住的人，从现在起都能获得该谜题的解法。不过，在我解释如何设置计算机来运行我的程序之前，我将先解释如何“阅读”它的输出。</p>
+<p>我一直很享受在世界黑白棋联盟 (worldothello.org) 网站上每日发布的残局谜题。其中一些相对简单，但我发现很多谜题相当具有挑战性。这些谜题从不发布任何解法，我认为这很遗憾。从这些谜题中可以学到很多关于残局打法的知识。但是，如果找不到解法，就很难从特定的谜题中学到东西。<br>为了解决这个问题，我用 Python 编程语言编写了一个程序。它可以打印出任何 WOF (World Othello Federation) 残局谜题的解法。运行我的程序所需的所有资源都可以在互联网上免费获得，稍后我将在本文中分享我的程序源代码。这意味着，任何偶尔被 WOF 谜题难住的人，从现在起都能获得该谜题的解法。不过，在我解释如何设置计算机来运行我的程序之前，我将先解释如何“阅读”它的输出。</p>
 <blockquote>
 <p>Here is a puzzle that appeared recently on the WOF website:</p>
 </blockquote>
@@ -563,26 +562,25 @@
 </blockquote>
 <p>尽管在我的程序输出中只有一行文本反映了对抗您的在线计算机对手获胜的正确方式，但仅凭这一行文本本身并不能作为原始谜题的完整“解法”。一个完整的解法应该考虑到所有可能的防守路线。它不应该仅仅针对特定对手选择的防守落子给出单一获胜序列。顺便提一下，我的程序并不试图最大化其获胜优势。在可能存在多个获胜落子的情况下，它会选择它发现的第一个能通向必然胜利的落子，完全忽略了另一个落子可能带来更显著胜利的可能性。</p>
 <blockquote>
-<p>Here is how to install and run my program.  It will run on either an Apple or on a Windows-based machine.  The installation process is a bit cumbersome, but it only needs to be done once.  After that, you can run my program as often as you like without repeating the installation procedure.   To install my program, you will first of all need a relatively up-to-date version of the Python computer language that is suitable for your computer’s operating system.  Python is available free of charge from <a target="_blank" rel="noopener" href="http://Python.org">Python.org</a>.  After installing Python, you will need to install Python’s “requests” module.  Installing this module is probably the trickiest step in the whole operation.  To install “requests” you will need to go to your “Terminal” window and type in one of two possible commands (depending upon which version of Python you have installed).  The wrong command will do no harm, but neither will it do any good.   If you have trouble either opening a “Terminal” window or running one of the “pip” commands shown below, Google can provide help. Here are the two possible commands:</p>
+<p>Here is how to install and run my program.  It will run on either an Apple or on a Windows-based machine.  The installation process is a bit cumbersome, but it only needs to be done once.  After that, you can run my program as often as you like without repeating the installation procedure.   To install my program, you will first of all need a relatively up-to-date version of the Python computer language that is suitable for your computer’s operating system.  Python is available free of charge from Python.org.  After installing Python, you will need to install Python’s “requests” module.  Installing this module is probably the trickiest step in the whole operation.  To install “requests” you will need to go to your “Terminal” window and type in one of two possible commands (depending upon which version of Python you have installed).  The wrong command will do no harm, but neither will it do any good.   If you have trouble either opening a “Terminal” window or running one of the “pip” commands shown below, Google can provide help. Here are the two possible commands:</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;pip <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
 <p>or:</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;pip3 <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
-<p>You should next download the file containing my code, which can be found here.  The file is called “PuzzleSolver.txt.”  After you download it, move it to an easy-to-find folder on your computer (such as your Documents folder).  Then change its name from “PuzzleSolver.txt” to “<a target="_blank" rel="noopener" href="http://PuzzleSolver.py">PuzzleSolver.py</a>” (I have given it the temporary name “PuzzleSolver.txt” only because many computers for security reasons are not comfortable letting you download a file having a “.py” extension).</p>
+<p>You should next download the file containing my code, which can be found here.  The file is called “PuzzleSolver.txt.”  After you download it, move it to an easy-to-find folder on your computer (such as your Documents folder).  Then change its name from “PuzzleSolver.txt” to “PuzzleSolver.py” (I have given it the temporary name “PuzzleSolver.txt” only because many computers for security reasons are not comfortable letting you download a file having a “.py” extension).</p>
 </blockquote>
-<p>要安装我的程序，您首先需要一个相对较新版本的 Python 编程语言，该版本需适合您计算机的操作系统。Python 可以免费从 <a target="_blank" rel="noopener" href="http://Python.org">Python.org</a> 获取。安装 Python 后，您需要安装 Python 的 “requests” 模块。安装这个模块可能是整个操作中最棘手的步骤。要安装 “requests”，您需要打开“终端”窗口并输入以下两个命令之一（具体取决于您安装的 Python 版本）。输入错误的命令不会造成危害，但也不会起任何作用。如果您在打开“终端”窗口或运行下面所示的 “pip” 命令时遇到困难，可以通过 Google 寻求帮助。以下是两个可能的命令：</p>
+<p>要安装我的程序，您首先需要一个相对较新版本的 Python 编程语言，该版本需适合您计算机的操作系统。Python 可以免费从 Python.org 获取。安装 Python 后，您需要安装 Python 的 “requests” 模块。安装这个模块可能是整个操作中最棘手的步骤。要安装 “requests”，您需要打开“终端”窗口并输入以下两个命令之一（具体取决于您安装的 Python 版本）。输入错误的命令不会造成危害，但也不会起任何作用。如果您在打开“终端”窗口或运行下面所示的 “pip” 命令时遇到困难，可以通过 Google 寻求帮助。以下是两个可能的命令：</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
-<p>或者：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
-<p>接下来，您应该下载包含我代码的文件，可以在这里找到。该文件名为 “PuzzleSolver.txt”。下载后，将其移动到计算机上易于查找的文件夹中（例如您的文档文件夹）。然后将其名称从 “PuzzleSolver.txt” 更改为 “<a target="_blank" rel="noopener" href="http://PuzzleSolver.py">PuzzleSolver.py</a>”（我给它临时命名为 “PuzzleSolver.txt”，只是因为许多计算机出于安全原因，不太允许您下载扩展名为 “.py” 的文件）。</p>
+<p>或者：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure></p>
+<p>接下来，您应该下载包含我代码的文件，可以在这里找到。该文件名为 “PuzzleSolver.txt”。下载后，将其移动到计算机上易于查找的文件夹中（例如您的文档文件夹）。然后将其名称从 “PuzzleSolver.txt” 更改为 “PuzzleSolver.py”（我给它临时命名为 “PuzzleSolver.txt”，只是因为许多计算机出于安全原因，不太允许您下载扩展名为 “.py” 的文件）。</p>
 <blockquote>
-<p>You should probably install a Python IDE.  I recommend Visual Studio Code, which is available on the internet free of charge (from <a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>).  It is possible to run Python programs directly from your Terminal window without using an IDE, but you are likely to have an easier time if you use an IDE.  After you have installed an IDE, fire it up and direct it to open the file containing my code: Puzzle <a target="_blank" rel="noopener" href="http://Solver.py">Solver.py</a>.  In part because of the file’s “.py” extension, your IDE should immediately recognize the plain text inside this file as Python code.  You should then be able to click on the IDE’s “run” icon (in the case of Visual Studio Code, the “run” icon is a right-facing arrow near the upper right corner of the screen).  Probably, you will need to scroll or enlarge the output portion of your screen to see the full text of my program’s puzzle solution.  It is possible that you could encounter a problem if you have more than one version of Python installed on your computer.  In that case you will need to make sure that your IDE is using the version of Python in which you have installed the “requests” module.</p>
+<p>You should probably install a Python IDE.  I recommend Visual Studio Code, which is available on the internet free of charge (from <a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>).  It is possible to run Python programs directly from your Terminal window without using an IDE, but you are likely to have an easier time if you use an IDE.  After you have installed an IDE, fire it up and direct it to open the file containing my code: Puzzle Solver.py.  In part because of the file’s “.py” extension, your IDE should immediately recognize the plain text inside this file as Python code.  You should then be able to click on the IDE’s “run” icon (in the case of Visual Studio Code, the “run” icon is a right-facing arrow near the upper right corner of the screen).  Probably, you will need to scroll or enlarge the output portion of your screen to see the full text of my program’s puzzle solution.  It is possible that you could encounter a problem if you have more than one version of Python installed on your computer.  In that case you will need to make sure that your IDE is using the version of Python in which you have installed the “requests” module.</p>
 </blockquote>
-<p>您可能需要安装一个 Python IDE（集成开发环境）。我推荐 Visual Studio Code，可以在互联网上免费获得（网址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a> ）。不使用 IDE 也可以直接从您的终端窗口运行 Python 程序，但使用 IDE 可能会让您更轻松。安装好 IDE 后，启动它并指示它打开包含我代码的文件：<a target="_blank" rel="noopener" href="http://PuzzleSolver.py">PuzzleSolver.py</a>。部分原因是文件的 “.py” 扩展名，您的 IDE 应该会立即识别此文件中的纯文本为 Python 代码。然后您应该能够点击 IDE 的“运行”图标（在 Visual Studio Code 中，“运行”图标是屏幕右上角附近的一个向右的箭头）。您可能需要滚动或放大屏幕的输出部分才能看到程序谜题解法的完整文本。如果您的计算机上安装了多个版本的 Python，您可能会遇到问题。在这种情况下，您需要确保您的 IDE 使用的是您已安装 “requests” 模块的那个 Python 版本。</p>
+<p>您可能需要安装一个 Python IDE（集成开发环境）。我推荐 Visual Studio Code，可以在互联网上免费获得（网址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a> ）。不使用 IDE 也可以直接从您的终端窗口运行 Python 程序，但使用 IDE 可能会让您更轻松。安装好 IDE 后，启动它并指示它打开包含我代码的文件：PuzzleSolver.py。部分原因是文件的 “.py” 扩展名，您的 IDE 应该会立即识别此文件中的纯文本为 Python 代码。然后您应该能够点击 IDE 的“运行”图标（在 Visual Studio Code 中，“运行”图标是屏幕右上角附近的一个向右的箭头）。您可能需要滚动或放大屏幕的输出部分才能看到程序谜题解法的完整文本。如果您的计算机上安装了多个版本的 Python，您可能会遇到问题。在这种情况下，您需要确保您的 IDE 使用的是您已安装 “requests” 模块的那个 Python 版本。</p>
 <blockquote>
-<p>Whenever you run my program, it will analyze the puzzle that is at that time being displayed on the WOF website.  If you run my program today, it will proceed to analyze today’s puzzle.  If you run my code tomorrow, it will analyze tomorrow’s puzzle.   I have not included any explanatory comments in my code, but I will gladly respond to any questions about how it works or any questions about how to install and run it.  You can get in touch with me through the “Contact” menu option on the home screen of my arithmetic website, <a target="_blank" rel="noopener" href="http://AdventuresInArithmetic.com">AdventuresInArithmetic.com</a>.</p>
+<p>Whenever you run my program, it will analyze the puzzle that is at that time being displayed on the WOF website.  If you run my program today, it will proceed to analyze today’s puzzle.  If you run my code tomorrow, it will analyze tomorrow’s puzzle.   I have not included any explanatory comments in my code, but I will gladly respond to any questions about how it works or any questions about how to install and run it.  You can get in touch with me through the “Contact” menu option on the home screen of my arithmetic website, AdventuresInArithmetic.com.</p>
 </blockquote>
 <p>每当您运行我的程序时，它都会分析当时显示在 WOF 网站上的谜题。如果您今天运行我的程序，它将分析今天的谜题。如果您明天运行我的代码，它将分析明天的谜题。</p>
-<p>我的代码中没有包含任何解释性注释，但我很乐意回答有关其工作原理或如何安装和运行它的任何问题。您可以通过我的算术网站 <a target="_blank" rel="noopener" href="http://AdventuresInArithmetic.com">AdventuresInArithmetic.com</a> 主页上的“联系”菜单选项与我取得联系。</p>
+<p>我的代码中没有包含任何解释性注释，但我很乐意回答有关其工作原理或如何安装和运行它的任何问题。您可以通过我的算术网站 AdventuresInArithmetic.com 主页上的“联系”菜单选项与我取得联系。</p>
 
 
         <hr>
